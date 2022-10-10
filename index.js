@@ -1,6 +1,3 @@
-
-
-
 // waits until DOM is loaded
 $(document).ready(() => {
   // set initial variables
