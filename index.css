@@ -27,9 +27,9 @@ body {
 }
 
 .box {
-  border: 10px solid black;
-  height: 200px;
-  width: 200px;
+  border: 20px solid black;
+  height: 250px;
+  width: 250px;
   display: inline-block;
 }
 
@@ -40,8 +40,8 @@ body {
 #green {
   background-color: rgba(0, 128, 0, 0.881);
   border-top-left-radius: 100%;
-  border-right: 5px solid black;
-  border-bottom: 5px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
 }
 #green:hover {
   background-color: green;
@@ -49,8 +49,8 @@ body {
 #red {
   background-color: rgba(255, 0, 0, 0.785);
   border-top-right-radius: 100%;
-  border-left: 5px solid black;
-  border-bottom: 5px solid black;
+  border-left: 10px solid black;
+  border-bottom: 10px solid black;
 }
 #red:hover {
   background-color: red;
@@ -58,8 +58,8 @@ body {
 #yellow {
   background-color: rgba(255, 255, 0, 0.77);
   border-bottom-left-radius: 100%;
-  border-right: 5px solid black;
-  border-top: 5px solid black;
+  border-right: 10px solid black;
+  border-top: 10px solid black;
 }
 #yellow:hover {
   background-color: yellow;
@@ -67,8 +67,8 @@ body {
 #blue {
   background-color: rgba(0, 0, 255, 0.783);
   border-bottom-right-radius: 100%;
-  border-top: 5px solid black;
-  border-left: 5px solid black;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
 }
 #blue:hover {
   background-color: blue;
@@ -79,9 +79,23 @@ body {
   background-color: black;
   border-radius: 100%;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #start:hover {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+
+/*box-shadow: h-offset(+r,-l) v-offset(+d,-u) blur spread color*/
+.greenPressed {
+  box-shadow: -75px -75px 50px 35px green;
+}
+.redPressed {
+  box-shadow: 75px -75px 50px 35px red;
+}
+.bluePressed {
+  box-shadow: 75px 75px 50px 35px blue;
+}
+.yellowPressed {
+  box-shadow: -75px 75px 50px 35px yellow;
 }
