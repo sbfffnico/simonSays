@@ -39,40 +39,40 @@ body {
 }
 
 #green {
-  background-color: rgba(0, 128, 0, 0.881);
+  background-color: rgba(0, 128, 0, 0.586);
   border-top-left-radius: 100%;
   border-right: 10px solid black;
   border-bottom: 10px solid black;
 }
 #green:hover {
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.731);
 }
 #red {
-  background-color: rgba(255, 0, 0, 0.785);
+  background-color: rgba(255, 0, 0, 0.53);
   border-top-right-radius: 100%;
   border-left: 10px solid black;
   border-bottom: 10px solid black;
 }
 #red:hover {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.761);
 }
 #yellow {
-  background-color: rgba(255, 255, 0, 0.77);
+  background-color: rgba(255, 255, 0, 0.495);
   border-bottom-left-radius: 100%;
   border-right: 10px solid black;
   border-top: 10px solid black;
 }
 #yellow:hover {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.767);
 }
 #blue {
-  background-color: rgba(0, 0, 255, 0.783);
+  background-color: rgba(0, 0, 255, 0.501);
   border-bottom-right-radius: 100%;
   border-top: 10px solid black;
   border-left: 10px solid black;
 }
 #blue:hover {
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.769);
 }
 #start {
   height: 22%;
@@ -87,14 +87,18 @@ body {
 
 /*box-shadow: h-offset(+r,-l) v-offset(+d,-u) blur spread color*/
 .greenPressed {
+  background-color: green !important;
   box-shadow: -75px -75px 50px 35px green;
 }
 .redPressed {
+  background-color: red !important;
   box-shadow: 75px -75px 50px 35px red;
 }
 .bluePressed {
+  background-color: blue !important;
   box-shadow: 75px 75px 50px 35px blue;
 }
 .yellowPressed {
+  background-color: yellow !important;
   box-shadow: -75px 75px 50px 35px yellow;
 }
