@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(44, 44, 44)
+}
+
+#heading {
+  font-size: 4rem;
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* center div and remote inline-block spacing */
+
+#container {
+  font-size: 0;
+}
+
+.centerBoth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  border: 10px solid black;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+#green {
+  background-color: rgba(0, 128, 0, 0.881);
+  border-top-left-radius: 100%;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+#green:hover {
+  background-color: green;
+}
+#red {
+  background-color: rgba(255, 0, 0, 0.785);
+  border-top-right-radius: 100%;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+}
+#red:hover {
+  background-color: red;
+}
+#yellow {
+  background-color: rgba(255, 255, 0, 0.77);
+  border-bottom-left-radius: 100%;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+}
+#yellow:hover {
+  background-color: yellow;
+}
+#blue {
+  background-color: rgba(0, 0, 255, 0.783);
+  border-bottom-right-radius: 100%;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+}
+#blue:hover {
+  background-color: blue;
+}
+#start {
+  height: 22%;
+  width: 22%;
+  background-color: black;
+  border-radius: 100%;
+  color: white;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#start:hover {
+  font-size: 1.2rem;
+}
