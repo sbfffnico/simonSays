@@ -4,6 +4,13 @@ let gamePattern = [];
 let userPattern = [];
 let gameStarted = false;
 let roundCount = 0;
+let audio = {
+  wrong: "https://cdn.freesound.org/previews/648/648462_11771918-lq.mp3",
+  green: "https://cdn.freesound.org/previews/186/186669_2731232-lq.mp3",
+  red: "https://cdn.freesound.org/previews/3/3515_6997-lq.mp3",
+  yellow: "https://cdn.freesound.org/previews/391/391649_7368738-lq.mp3",
+  blue: "https://cdn.freesound.org/previews/643/643139_14142921-lq.mp3",
+}
 
 // simulates the button lighting up
 const lightUp = (color) => {
@@ -15,12 +22,17 @@ const removeLight = (color) => {
 }
 // combines lightUp and removeLight functions for easier use
 const flashColor = (color) => {
+  playSound(audio[color]);
   lightUp(color);
   removeLight(color);
 }
 // selects choice at random to later be added to full pattern
 const randomChoice = (choices) => {
   return Math.floor(Math.random() * choices.length);
+}
+const playSound = (sound) => {
+  var audio = new Audio(sound);
+  audio.play();
 }
 
 // adjusts text within the start button to avoid wrapping
@@ -47,6 +59,7 @@ const congratulate = () => {
 
 // prints text to document to advise player they have lost and resets variables
 const gameOver = () => {
+  playSound(audio.wrong);
   $("#heading").text(`SIMON SAYS... GAME OVER AT ROUND ${roundCount}`);
   $("#startText").css("font-size","0.6rem");
   $("#startText").text(`Play Again?`);
@@ -61,7 +74,7 @@ function lightSequence() {
   let intervalID = setInterval(() => {
     let color = tempPattern.splice(0,1);
     flashColor(color);
-    if(empty(tempPattern)) {
+    if(tempPattern.length == 0) {
       clearInterval(intervalID);
     }
   }, 600);
