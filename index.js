@@ -12,6 +12,15 @@ let audio = {
   blue: "https://cdn.freesound.org/previews/643/643139_14142921-lq.mp3",
 }
 
+$(document).ready(() => {
+  if(localStorage.getItem('highScore')) {
+    $("#highscore").text(`High score: ${localStorage.getItem('highScore')}`);
+  }
+  else {
+    $("#highscore").text(`High score: 0`);
+  }
+});
+
 // simulates the button lighting up
 const lightUp = (color) => {
   $(`#${color}`).addClass(`${color}Pressed`);
@@ -65,6 +74,12 @@ const gameOver = () => {
   $("#startText").text(`Play Again?`);
   gameStarted = false;
   gamePattern = [];
+  let highScore = roundCount > 0 ? roundCount - 1 : 0;
+  if (localStorage.getItem('highScore') < highScore) {
+    localStorage.setItem('highScore', highScore);
+  }
+  $("#highscore").text(`High score: ${localStorage.getItem('highScore')}`);
+  console.log(localStorage.getItem('highScore'));
   roundCount = 0;
 }
 

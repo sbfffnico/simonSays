@@ -6,14 +6,15 @@ body {
   background-color: rgb(44, 44, 44)
 }
 
-#heading {
-  font-size: 4rem;
+.text {
   color: white;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 
-/* center div and remote inline-block spacing */
+#heading {
+  font-size: 4rem;
+}
 
 #container {
   font-size: 0;
@@ -78,9 +79,7 @@ body {
   width: 22%;
   background-color: black;
   border-radius: 100%;
-  color: white;
   font-size: 1.2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #start:hover {
   font-size: 1.5rem;
